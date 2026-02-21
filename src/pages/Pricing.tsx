@@ -6,7 +6,7 @@ export function Pricing() {
   const packages = [
     {
       name: "Starter Package",
-      price: "$800",
+      price: "starting at $800",
       subtitle: "Perfect for small churches and new businesses",
       description: "Everything you need to establish a professional online presence",
       features: [

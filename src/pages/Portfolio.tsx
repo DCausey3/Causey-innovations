@@ -10,11 +10,12 @@ export function Portfolio() {
     { id: "all", label: "All Projects" },
     { id: "churches", label: "Churches" },
     { id: "businesses", label: "Businesses" },
+      { id: "Weddings", label: "Weddings" },
   ];
 
   const projects = [
     {
-      title: "Grace Community Church",
+      title: "East Conference Lay Organization ",
       category: "churches",
       description: "Complete website redesign with member portal and event management system",
       image: "church modern building",
@@ -28,8 +29,8 @@ export function Portfolio() {
         "Grace Community Church saw a 300% increase in online engagement within the first 3 months. The new member portal streamlined communication and event registration.",
     },
     {
-      title: "Faith Baptist Church",
-      category: "churches",
+      title: "The Causey Union",
+      category: "Wedding",
       description: "Modern website with integrated giving platform and sermon archive",
       image: "church contemporary interior",
       stats: [
@@ -41,62 +42,62 @@ export function Portfolio() {
       results:
         "Online giving increased by 150% and the sermon archive became one of the most visited sections, with over 1,200 monthly visitors.",
     },
-    {
-      title: "Chen & Associates",
-      category: "businesses",
-      description: "Professional service website with CRM integration and client portal",
-      image: "modern office workspace",
-      stats: [
-        { icon: TrendingUp, value: "85%", label: "Lead Conversion" },
-        { icon: Users, value: "500+", label: "Clients Managed" },
-        { icon: Clock, value: "5 weeks", label: "Delivery Time" },
-      ],
-      tags: ["CRM Integration", "Client Portal", "Lead Generation"],
-      results:
-        "The integrated CRM system improved lead tracking by 85% and the client portal reduced administrative workload by 40%.",
-    },
-    {
-      title: "Summit Ridge Church",
-      category: "churches",
-      description: "Multi-campus website with location-specific content and volunteer management",
-      image: "mountain church landscape",
-      stats: [
-        { icon: TrendingUp, value: "200%", label: "Volunteer Signups" },
-        { icon: Users, value: "3,800+", label: "Weekly Visitors" },
-        { icon: Clock, value: "6 weeks", label: "Delivery Time" },
-      ],
-      tags: ["Multi-location", "Volunteer System", "Custom Design"],
-      results:
-        "Volunteer signups increased 200% with the new streamlined system, and the multi-campus structure improved user experience across all locations.",
-    },
-    {
-      title: "Riverside Community Center",
-      category: "businesses",
-      description: "Event booking platform with payment processing and calendar integration",
-      image: "community center event",
-      stats: [
-        { icon: TrendingUp, value: "250%", label: "Booking Increase" },
-        { icon: Users, value: "800+", label: "Monthly Bookings" },
-        { icon: Clock, value: "5 weeks", label: "Delivery Time" },
-      ],
-      tags: ["Booking System", "Payment Integration", "Calendar Sync"],
-      results:
-        "Online bookings increased 250% and payment processing automation saved 20 hours per week in administrative time.",
-    },
-    {
-      title: "Trinity Church",
-      category: "churches",
-      description: "Bilingual website with live streaming and small group management",
-      image: "diverse congregation worship",
-      stats: [
-        { icon: TrendingUp, value: "400%", label: "Online Viewers" },
-        { icon: Users, value: "1,800+", label: "Small Group Members" },
-        { icon: Clock, value: "4 weeks", label: "Delivery Time" },
-      ],
-      tags: ["Bilingual", "Live Streaming", "Group Management"],
-      results:
-        "Live stream viewers grew 400% and the small group management system organized 1,800+ members across 120 groups.",
-    },
+    // {
+    //   title: "Chen & Associates",
+    //   category: "businesses",
+    //   description: "Professional service website with CRM integration and client portal",
+    //   image: "modern office workspace",
+    //   stats: [
+    //     { icon: TrendingUp, value: "85%", label: "Lead Conversion" },
+    //     { icon: Users, value: "500+", label: "Clients Managed" },
+    //     { icon: Clock, value: "5 weeks", label: "Delivery Time" },
+    //   ],
+    //   tags: ["CRM Integration", "Client Portal", "Lead Generation"],
+    //   results:
+    //     "The integrated CRM system improved lead tracking by 85% and the client portal reduced administrative workload by 40%.",
+    // },
+    // {
+    //   title: "Summit Ridge Church",
+    //   category: "churches",
+    //   description: "Multi-campus website with location-specific content and volunteer management",
+    //   image: "mountain church landscape",
+    //   stats: [
+    //     { icon: TrendingUp, value: "200%", label: "Volunteer Signups" },
+    //     { icon: Users, value: "3,800+", label: "Weekly Visitors" },
+    //     { icon: Clock, value: "6 weeks", label: "Delivery Time" },
+    //   ],
+    //   tags: ["Multi-location", "Volunteer System", "Custom Design"],
+    //   results:
+    //     "Volunteer signups increased 200% with the new streamlined system, and the multi-campus structure improved user experience across all locations.",
+    // },
+    // {
+    //   title: "Riverside Community Center",
+    //   category: "businesses",
+    //   description: "Event booking platform with payment processing and calendar integration",
+    //   image: "community center event",
+    //   stats: [
+    //     { icon: TrendingUp, value: "250%", label: "Booking Increase" },
+    //     { icon: Users, value: "800+", label: "Monthly Bookings" },
+    //     { icon: Clock, value: "5 weeks", label: "Delivery Time" },
+    //   ],
+    //   tags: ["Booking System", "Payment Integration", "Calendar Sync"],
+    //   results:
+    //     "Online bookings increased 250% and payment processing automation saved 20 hours per week in administrative time.",
+    // },
+    // {
+    //   title: "Trinity Church",
+    //   category: "churches",
+    //   description: "Bilingual website with live streaming and small group management",
+    //   image: "diverse congregation worship",
+    //   stats: [
+    //     { icon: TrendingUp, value: "400%", label: "Online Viewers" },
+    //     { icon: Users, value: "1,800+", label: "Small Group Members" },
+    //     { icon: Clock, value: "4 weeks", label: "Delivery Time" },
+    //   ],
+    //   tags: ["Bilingual", "Live Streaming", "Group Management"],
+    //   results:
+    //     "Live stream viewers grew 400% and the small group management system organized 1,800+ members across 120 groups.",
+    // },
   ];
 
   const filteredProjects =

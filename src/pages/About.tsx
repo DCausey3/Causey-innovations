@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Target, Heart, Lightbulb, Users, TrendingUp, Award, CheckCircle2 } from "lucide-react";
 import { GlowButton } from "../components/GlowButton";
+import headshot from "../assets/Headshot.jpeg";
 
 export function About() {
   return (
@@ -33,25 +34,74 @@ export function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold text-white mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-400">
-                <p>
-                  Causey Innovations was founded with a simple mission: to help churches and small
-                  organizations thrive in the digital age. We saw too many worthy causes struggling with
-                  outdated technology, complex systems, and expensive solutions.
-                </p>
-                <p>
-                  As a founder-led business, we bring a personal touch to every project. We're not a
-                  massive agency—we're a dedicated team that genuinely cares about your success. When you
-                  work with us, you're working with people who understand that technology should serve your
-                  mission, not complicate it.
-                </p>
-                <p>
-                  We don't just build websites. We build systems that help you grow, connect with your
-                  community, and achieve your goals. Every database, every form, every analytics
-                  dashboard—they're all designed with your long-term success in mind.
-                </p>
-              </div>
+                <h2 className="text-4xl font-bold text-white mb-6">
+                   Built with Purpose
+                </h2>
+
+                <div className="space-y-6 text-gray-400">
+
+                    <div>
+                        <h3 className="text-2xl font-semibold text-white mb-3">
+                            About the Founder
+                        </h3>
+                        <p>
+                            My name is <b>Damariel Causey</b>, a graduate of the University of Florida
+                            with a Bachelor’s degree in Computer Science and a professional Software Engineer.
+                            Technology has always been more than a career for me — it’s a tool for impact.
+                        </p>
+                        <p className="mt-4">
+                            Causey Innovations represents who I am. My last name is Causey, but I’ve
+                            always believed in going above and beyond to innovate. I saw too many
+                            churches and small businesses with powerful missions being limited by
+                            outdated systems or overpriced solutions. I started Causey Innovations
+                            to change that.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-2xl font-semibold text-white mb-3">
+                            The Mission
+                        </h3>
+                        <p>
+                            We primarily serve churches and small businesses that want to grow but
+                            may not have the resources to spend three times the cost for enterprise-level systems.
+                        </p>
+                        <p className="mt-4">
+                            Inspired by Isaiah 43:19 — “See, I am doing a new thing…” — we believe
+                            technology should help organizations move forward, not stay stuck in the past.
+                        </p>
+
+                        <p className="mt-4 font-medium text-white">That means building:</p>
+
+                        <ul className="list-disc list-inside mt-3 space-y-2">
+                            <li>Modern websites</li>
+                            <li>Admin portals</li>
+                            <li>CRM systems</li>
+                            <li>Secure databases</li>
+                            <li>Analytics & growth tracking</li>
+                        </ul>
+
+                        <p className="mt-4">
+                            We don’t just build websites. We build digital infrastructure that becomes
+                            the centerpiece of your organization’s growth.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-2xl font-semibold text-white mb-3">
+                            The Vision
+                        </h3>
+                        <p>
+                            Technology should not be a burden. It should be a bridge — connecting
+                            people, streamlining operations, and expanding your reach.
+                        </p>
+                        <p className="mt-4">
+                            If you're ready to advance your organization to the next level,
+                            we’d love to partner with you.
+                        </p>
+                    </div>
+
+                </div>
             </motion.div>
 
             <motion.div
@@ -63,9 +113,20 @@ export function About() {
             >
               <div className="bg-gradient-to-br from-[#1a2642] to-[#2d3e5c] border border-[#00d4d4]/20 rounded-2xl p-8 aspect-square flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-[#00d4d4]/10 flex items-center justify-center">
-                    <Users className="w-16 h-16 text-[#00d4d4]" />
-                  </div>
+                    <div className="flex flex-col flex-center items-center ">
+                        <img
+                            src={headshot}
+                            alt="Damariel Causey - Founder of Causey Innovations"
+                            className="w-40 h-40 rounded-full object-cover border-4 border-[#00d4d4]/30 shadow-lg mb-4"
+                        />
+                        <p className="text-white font-semibold text-lg">
+                            Damariel Causey
+                        </p>
+                        <p className="text-gray-400 text-sm">
+                            Founder & Lead Software Engineer
+                        </p>
+                    </div>
+
                   <p className="text-gray-300 text-lg italic">
                     "Technology should empower your mission, not complicate it."
                   </p>
