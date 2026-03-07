@@ -311,8 +311,8 @@ export function Home() {
               className="grid grid-cols-2 gap-6"
             >
               {[
-                { icon: Zap, title: "Fast Performance", value: "3x faster" },
-                { icon: Shield, title: "Secure & Reliable", value: "99.9% uptime" },
+                // { icon: Zap, title: "Fast Performance", value: "3x faster" },
+                // { icon: Shield, title: "Secure & Reliable", value: "99.9% uptime" },
                 { icon: TrendingUp, title: "Scalable Growth", value: "Grow with you" },
                 { icon: CheckCircle2, title: "SEO Optimized", value: "Get found" },
               ].map((stat, index) => (
@@ -332,148 +332,165 @@ export function Home() {
       </section>
 
       {/* Pricing Overview Section */}
-      <section className="py-24 px-4 relative">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-gray-400">Choose the package that fits your needs</p>
-          </motion.div>
+        <section className="py-24 px-4 relative">
+            <div className="container mx-auto max-w-6xl">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                name: "Starter Package",
-                price: "$800",
-                description: "Perfect for small churches and new businesses",
-                features: [
-                  "5-page professional website",
-                  "Mobile responsive design",
-                  "Contact form integration",
-                  "Basic SEO setup",
-                  "30 days post-launch support",
-                ],
-              },
-              {
-                name: "Growth Package",
-                price: "Starting at $1,200",
-                description: "For growing businesses and member-focused churches",
-                features: [
-                  "Custom website design",
-                  "Database integration",
-                  "Analytics & tracking setup",
-                  "CRM/email integration",
-                  "Strategy session included",
-                  "30 days post-launch support",
-                ],
-                featured: true,
-              },
-            ].map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
-                className={`bg-[#1a2642] border rounded-lg p-8 ${
-                  plan.featured
-                    ? "border-[#00d4d4] shadow-lg shadow-[#00d4d4]/20"
-                    : "border-[#00d4d4]/20"
-                }`}
-              >
-                {plan.featured && (
-                  <div className="bg-[#00d4d4] text-[#0f1729] text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">
-                    MOST POPULAR
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-4xl font-bold text-[#00d4d4] mb-4">{plan.price}</p>
-                <p className="text-gray-400 mb-6">{plan.description}</p>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#00d4d4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <GlowButton
-                  to="/pricing"
-                  variant={plan.featured ? "primary" : "secondary"}
-                  className="w-full"
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-16"
                 >
-                  Learn More
-                </GlowButton>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        Simple, Transparent Pricing
+                    </h2>
+                    <p className="text-xl text-gray-400">
+                        Choose the package that fits your needs
+                    </p>
+                </motion.div>
+
+                {/* Pricing Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    {[
+                        {
+                            name: "Starter Package",
+                            price: "Starting at $800",
+                            description: "Perfect for small churches and new businesses",
+                            features: [
+                                "Up to 5-page professional website",
+                                "Mobile responsive design",
+                                "Contact form integration",
+                                "Basic SEO setup",
+                                "30 days post-launch support",
+                            ],
+                        },
+                        {
+                            name: "Growth Package",
+                            price: "Starting at $1,200",
+                            description: "For growing businesses and member-focused churches",
+                            features: [
+                                "Custom website design",
+                                "Database integration",
+                                "Analytics & tracking setup",
+                                "CRM/email integration",
+                                "Strategy session included",
+                                "30 days post-launch support",
+                            ],
+                            featured: true,
+                        }
+                    ].map((plan, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            whileHover={{ y: -10 }}
+                            className={`bg-[#1a2642] border rounded-lg p-8 ${
+                                plan.featured
+                                    ? "border-[#00d4d4] shadow-lg shadow-[#00d4d4]/20"
+                                    : "border-[#00d4d4]/20"
+                            }`}
+                        >
+                            {plan.featured && (
+                                <div className="bg-[#00d4d4] text-[#0f1729] text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">
+                                    MOST POPULAR
+                                </div>
+                            )}
+
+                            <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                            <p className="text-4xl font-bold text-[#00d4d4] mb-4">{plan.price}</p>
+                            <p className="text-gray-400 mb-6">{plan.description}</p>
+
+                            <ul className="space-y-3 mb-8">
+                                {plan.features.map((feature, i) => (
+                                    <li key={i} className="flex items-start space-x-3">
+                                        <CheckCircle2 className="w-5 h-5 text-[#00d4d4] flex-shrink-0 mt-0.5" />
+                                        <span className="text-gray-300">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <GlowButton
+                                to="/pricing"
+                                variant={plan.featured ? "primary" : "secondary"}
+                                className="w-full"
+                            >
+                                Learn More
+                            </GlowButton>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* Pricing Disclaimer */}
+                <p className="text-sm text-gray-500 mt-10 text-center max-w-3xl mx-auto">
+                    Prices shown are starting estimates. Final project pricing may vary depending on
+                    customization, integrations, content needs, and overall project scope.
+                    After a consultation, a detailed quote will be provided.
+                </p>
+
+            </div>
+        </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 px-4 bg-[#0f1729]/50 relative">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-gray-400">Real results from real organizations</p>
-          </motion.div>
+      {/*<section className="py-24 px-4 bg-[#0f1729]/50 relative">*/}
+      {/*  <div className="container mx-auto max-w-6xl">*/}
+      {/*    <motion.div*/}
+      {/*      initial={{ opacity: 0, y: 30 }}*/}
+      {/*      whileInView={{ opacity: 1, y: 0 }}*/}
+      {/*      viewport={{ once: true }}*/}
+      {/*      transition={{ duration: 0.8 }}*/}
+      {/*      className="text-center mb-16"*/}
+      {/*    >*/}
+      {/*      <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">What Our Clients Say</h2>*/}
+      {/*      <p className="text-xl text-gray-400">Real results from real organizations</p>*/}
+      {/*    </motion.div>*/}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                quote:
-                  "Causey Innovations transformed our online presence. Our visitor engagement increased by 300% in the first three months.",
-                author: "Pastor Michael Johnson",
-                organization: "Grace Community Church",
-              },
-              {
-                quote:
-                  "The database integration has been a game-changer for managing our congregation. Everything is organized and accessible.",
-                author: "Sarah Williams",
-                organization: "Faith Baptist Church",
-              },
-              {
-                quote:
-                  "Professional, reliable, and they truly understand what small businesses need. Highly recommend their services.",
-                author: "David Chen",
-                organization: "Chen & Associates",
-              },
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-[#1a2642] border border-[#00d4d4]/20 rounded-lg p-6 hover:border-[#00d4d4]/50 transition-all"
-              >
-                <div className="mb-4">
-                  <svg className="w-10 h-10 text-[#00d4d4] opacity-50" fill="currentColor" viewBox="0 0 32 32">
-                    <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z" />
-                  </svg>
-                </div>
-                <p className="text-gray-300 mb-6 italic">{testimonial.quote}</p>
-                <div className="border-t border-[#00d4d4]/20 pt-4">
-                  <p className="text-white font-semibold">{testimonial.author}</p>
-                  <p className="text-sm text-gray-400">{testimonial.organization}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/*    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">*/}
+      {/*      {[*/}
+      {/*        {*/}
+      {/*          quote:*/}
+      {/*            "Causey Innovations transformed our online presence. Our visitor engagement increased by 300% in the first three months.",*/}
+      {/*          author: "Pastor Michael Johnson",*/}
+      {/*          organization: "Grace Community Church",*/}
+      {/*        },*/}
+      {/*        {*/}
+      {/*          quote:*/}
+      {/*            "The database integration has been a game-changer for managing our congregation. Everything is organized and accessible.",*/}
+      {/*          author: "Sarah Williams",*/}
+      {/*          organization: "Faith Baptist Church",*/}
+      {/*        },*/}
+      {/*        {*/}
+      {/*          quote:*/}
+      {/*            "Professional, reliable, and they truly understand what small businesses need. Highly recommend their services.",*/}
+      {/*          author: "David Chen",*/}
+      {/*          organization: "Chen & Associates",*/}
+      {/*        },*/}
+      {/*      ].map((testimonial, index) => (*/}
+      {/*        <motion.div*/}
+      {/*          key={index}*/}
+      {/*          initial={{ opacity: 0, y: 30 }}*/}
+      {/*          whileInView={{ opacity: 1, y: 0 }}*/}
+      {/*          viewport={{ once: true }}*/}
+      {/*          transition={{ duration: 0.6, delay: index * 0.1 }}*/}
+      {/*          className="bg-[#1a2642] border border-[#00d4d4]/20 rounded-lg p-6 hover:border-[#00d4d4]/50 transition-all"*/}
+      {/*        >*/}
+      {/*          <div className="mb-4">*/}
+      {/*            <svg className="w-10 h-10 text-[#00d4d4] opacity-50" fill="currentColor" viewBox="0 0 32 32">*/}
+      {/*              <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm14 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z" />*/}
+      {/*            </svg>*/}
+      {/*          </div>*/}
+      {/*          <p className="text-gray-300 mb-6 italic">{testimonial.quote}</p>*/}
+      {/*          <div className="border-t border-[#00d4d4]/20 pt-4">*/}
+      {/*            <p className="text-white font-semibold">{testimonial.author}</p>*/}
+      {/*            <p className="text-sm text-gray-400">{testimonial.organization}</p>*/}
+      {/*          </div>*/}
+      {/*        </motion.div>*/}
+      {/*      ))}*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
       {/* Final CTA Section */}
       <section className="py-24 px-4 relative">
