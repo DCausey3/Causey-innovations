@@ -60,6 +60,7 @@ export function Contact() {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
+
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Get In Touch</h2>
                 <p className="text-gray-400 mb-8">
@@ -67,59 +68,67 @@ export function Contact() {
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#00d4d4]/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-[#00d4d4]" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Email Us</h3>
-                    <p className="text-gray-400">hello@causeyinnovations.com</p>
-                    <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
-                  </div>
-                </div>
+                <div className="space-y-6">
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#00d4d4]/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-[#00d4d4]" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Call Us</h3>
-                    <p className="text-gray-400">(555) 123-4567</p>
-                    <p className="text-sm text-gray-500">Mon-Fri, 9am-5pm EST</p>
-                  </div>
-                </div>
+                    {/* Email */}
+                    <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 rounded-lg bg-[#00d4d4]/10 flex items-center justify-center flex-shrink-0">
+                            <Mail className="w-6 h-6 text-[#00d4d4]" />
+                        </div>
+                        <div>
+                            <h3 className="text-white font-semibold mb-1">Email</h3>
+                            <p className="text-gray-400">causeyd1@outlook.com</p>
+                            <p className="text-sm text-gray-500">Response within 24 hours</p>
+                        </div>
+                    </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#00d4d4]/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-[#00d4d4]" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Location</h3>
-                    <p className="text-gray-400">Serving clients nationwide</p>
-                    <p className="text-sm text-gray-500">Remote-first company</p>
-                  </div>
-                </div>
+                    {/* Phone */}
+                    <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 rounded-lg bg-[#00d4d4]/10 flex items-center justify-center flex-shrink-0">
+                            <Phone className="w-6 h-6 text-[#00d4d4]" />
+                        </div>
+                        <div>
+                            <h3 className="text-white font-semibold mb-1">Phone</h3>
+                            <p className="text-gray-400">(352) 284-1736</p>
+                            <p className="text-sm text-gray-500">By appointment</p>
+                        </div>
+                    </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#00d4d4]/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-[#00d4d4]" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Business Hours</h3>
-                    <p className="text-gray-400">Monday - Friday</p>
-                    <p className="text-sm text-gray-500">9:00 AM - 5:00 PM EST</p>
-                  </div>
-                </div>
-              </div>
+                    {/* Location */}
+                    <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 rounded-lg bg-[#00d4d4]/10 flex items-center justify-center flex-shrink-0">
+                            <MapPin className="w-6 h-6 text-[#00d4d4]" />
+                        </div>
+                        <div>
+                            <h3 className="text-white font-semibold mb-1">Location</h3>
+                            <p className="text-gray-400">Serving clients nationwide</p>
+                            <p className="text-sm text-gray-500">Remote-first</p>
+                        </div>
+                    </div>
 
-              <div className="mt-8 p-6 bg-[#1a2642] border border-[#00d4d4]/20 rounded-lg">
-                <h3 className="text-white font-semibold mb-3">Quick Response Guarantee</h3>
-                <p className="text-gray-400 text-sm">
-                  We typically respond to all inquiries within 24 hours during business days. Need urgent
-                  assistance? Call us directly.
-                </p>
-              </div>
+                    {/* Availability */}
+                    <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 rounded-lg bg-[#00d4d4]/10 flex items-center justify-center flex-shrink-0">
+                            <Clock className="w-6 h-6 text-[#00d4d4]" />
+                        </div>
+                        <div>
+                            <h3 className="text-white font-semibold mb-1">Availability</h3>
+                            <p className="text-gray-400">Evenings & Weekends</p>
+                            <p className="text-sm text-gray-500">Consultations by appointment</p>
+                        </div>
+                    </div>
+
+                    {/* Response Box */}
+                    <div className="mt-8 p-6 bg-[#1a2642] border border-[#00d4d4]/20 rounded-lg">
+                        <h3 className="text-white font-semibold mb-3">Quick Response Guarantee</h3>
+                        <p className="text-gray-400 text-sm">
+                            Most inquiries receive a response within 24 hours. For project consultations
+                            or urgent questions, feel free to include your phone number in the message.
+                        </p>
+                    </div>
+
+
+                </div>
             </motion.div>
 
             {/* Contact Form */}
@@ -347,14 +356,14 @@ export function Contact() {
             <p className="text-gray-400 mb-8">We're flexible! Reach out however you're most comfortable.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:hello@causeyinnovations.com"
+                href="mailto:causeyd1@outlook.com"
                 className="px-8 py-3 bg-[#1a2642] border border-[#00d4d4]/20 text-[#00d4d4] rounded-lg font-semibold transition-all hover:bg-[#00d4d4]/10 hover:border-[#00d4d4]/50 flex items-center justify-center space-x-2"
               >
                 <Mail className="w-5 h-5" />
                 <span>Email Us Directly</span>
               </a>
               <a
-                href="tel:+15551234567"
+                href="tel:+13522841736"
                 className="px-8 py-3 bg-[#1a2642] border border-[#00d4d4]/20 text-[#00d4d4] rounded-lg font-semibold transition-all hover:bg-[#00d4d4]/10 hover:border-[#00d4d4]/50 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
