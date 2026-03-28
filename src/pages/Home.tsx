@@ -355,30 +355,53 @@ export function Home() {
                     {[
                         {
                             name: "Starter Package",
-                            price: "Starting at $800",
-                            description: "Perfect for small churches and new businesses",
+                            price: "Custom Quote",
+                            subtitle: "Perfect for small churches and new businesses",
+                            description: "Everything you need to establish a professional online presence",
                             features: [
-                                "Up to 5-page professional website",
+                                "5-page professional website",
                                 "Mobile responsive design",
                                 "Contact form integration",
                                 "Basic SEO setup",
+                                "Google Analytics integration",
+                                "Social media links",
+                                "Professional domain setup",
+                                "Email configuration",
                                 "30 days post-launch support",
+                            ],
+                            idealFor: [
+                                "Small churches starting online",
+                                "New businesses",
+                                "Organizations needing a basic web presence",
+                                "Budget-conscious ministries",
                             ],
                         },
                         {
                             name: "Growth Package",
-                            price: "Starting at $1,200",
-                            description: "For growing businesses and member-focused churches",
+                            price: "Custom Quote",
+                            subtitle: "For growing businesses and member-focused churches",
+                            description: "Advanced features for organizations ready to scale",
                             features: [
-                                "Custom website design",
-                                "Database integration",
-                                "Analytics & tracking setup",
-                                "CRM/email integration",
+                                "Custom website design (unlimited pages)",
+                                "Advanced database integration",
+                                "Member tracking system",
+                                "Analytics & tracking dashboard",
+                                "CRM/email integration (Mailchimp, Constant Contact, etc.)",
+                                "Custom forms and workflows",
+                                "Advanced SEO optimization",
                                 "Strategy session included",
+                                "Content migration assistance",
+                                "Training for your team",
                                 "30 days post-launch support",
                             ],
+                            idealFor: [
+                                "Growing churches with member management needs",
+                                "Businesses requiring CRM integration",
+                                "Organizations tracking engagement data",
+                                "Teams needing training and strategy",
+                            ],
                             featured: true,
-                        }
+                        },
                     ].map((plan, index) => (
                         <motion.div
                             key={index}

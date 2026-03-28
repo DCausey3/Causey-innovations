@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import {Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram} from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,14 +17,8 @@ export function Footer() {
               Building digital infrastructure that connects churches and businesses with their communities.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-[#00d4d4] transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-[#00d4d4] transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-[#00d4d4] transition-colors">
-                <Facebook size={20} />
+              <a href="https://www.instagram.com/causeyinnovations/" className="text-gray-400 hover:text-[#00d4d4] transition-colors">
+                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -73,11 +67,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 text-gray-400 text-sm">
                 <Mail size={16} className="text-[#00d4d4]" />
-                <span>hello@causeyinnovations.com</span>
+                <span>info@causeyInnovations.com</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-400 text-sm">
                 <Phone size={16} className="text-[#00d4d4]" />
-                <span>(555) 123-4567</span>
+                <span>(352) 284-1736</span>
               </li>
               <li className="flex items-start space-x-2 text-gray-400 text-sm">
                 <MapPin size={16} className="text-[#00d4d4] mt-1" />
