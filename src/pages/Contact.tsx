@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { useState, useCallback } from "react";
-import { GlowButton } from "../components/GlowButton";
+import { post } from 'aws-amplify/api';
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -14,12 +14,28 @@ export function Contact() {
 
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = useCallback((e: React.FormEvent) => {
+// Inside your Contact component
+    const handleSubmit = useCallback(async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
-        setSubmitted(true);
-        setFormData({ name: "", email: "", organization: "", projectType: "", message: "" });
-        setTimeout(() => setSubmitted(false), 5000);
+
+        try {
+            // Adjust 'apiName' and 'path' to match your amplify/backend.ts setup
+            const { body } = await post({
+                apiName: 'myContactApi',
+                path: '/contact',
+                options: {
+                    body: formData // Sends name, email, organization, projectType, message
+                }
+            }).response;
+
+            setSubmitted(true);
+            setFormData({ name: "", email: "", organization: "", projectType: "", message: "" });
+            setTimeout(() => setSubmitted(false), 5000);
+
+        } catch (error) {
+            console.error("Submission error:", error);
+            alert("Something went wrong. Please try again.");
+        }
     }, [formData]);
 
     const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.13.2",
+    "@aws-sdk/client-ses": "^3.972.0",
+    "@aws-sdk/client-sns": "^3.975.0",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-accordion": "^1.2.3",
@@ -33,6 +36,7 @@
     "@radix-ui/react-tooltip": "^1.1.8",
     "@stripe/stripe-js": "^8.7.0",
     "@tailwindcss/vite": "^4.1.18",
+    "aws-amplify": "^6.15.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "*",
     "cmdk": "^1.1.1",
@@ -55,6 +59,9 @@
     "vaul": "^1.1.2"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.20.0",
+    "@aws-amplify/backend-cli": "^1.8.2",
+    "aws-cdk-lib": "^2.234.1",
     "@types/node": "^20.10.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.2",

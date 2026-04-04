@@ -1,0 +1,12 @@
+type RSVP @model @auth(rules: [{ allow: groups, groups: ["Admin"] },
+{ allow: private, operations: [read, update] }]) {
+  id: ID!
+  name: String!
+  email: String!
+  phoneNumber:number
+  maxGuest:string!
+  rsvpStatus: Boolean
+  attending: Boolean!
+  guests: Int
+  createdAt: AWSDateTime
+}
