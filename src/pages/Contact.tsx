@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { useState, useCallback } from "react";
+import outputs from '../../amplify_outputs.json';
 import { post } from 'aws-amplify/api';
 
 export function Contact() {
@@ -19,22 +20,26 @@ export function Contact() {
         e.preventDefault();
 
         try {
-            // Adjust 'apiName' and 'path' to match your amplify/backend.ts setup
-            const { body } = await post({
-                apiName: 'myContactApi',
-                path: '/contact',
-                options: {
-                    body: formData // Sends name, email, organization, projectType, message
-                }
-            }).response;
+            const apiUrl = outputs.custom.contactApiUrl;
+
+            const res = await fetch(`${apiUrl}/contact`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) {
+                const err = await res.json();
+                throw new Error(err.error || 'Request failed');
+            }
 
             setSubmitted(true);
-            setFormData({ name: "", email: "", organization: "", projectType: "", message: "" });
+            setFormData({ name: '', email: '', organization: '', projectType: '', message: '' });
             setTimeout(() => setSubmitted(false), 5000);
 
         } catch (error) {
-            console.error("Submission error:", error);
-            alert("Something went wrong. Please try again.");
+            console.error('Submission error:', error);
+            alert('Something went wrong. Please try again.');
         }
     }, [formData]);
 
