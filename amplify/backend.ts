@@ -2,7 +2,7 @@ import { defineBackend } from '@aws-amplify/backend';
 import { auth } from './auth/resource';
 import { data } from './data/resource';
 import { sendEmail } from './functions/send-email/resource';
-import {Cors, LambdaIntegration, RestApi} from "aws-cdk-lib/aws-apigateway";
+import * as iam from 'aws-cdk-lib/aws-iam';
 
 const backend = defineBackend({
     auth,
@@ -11,15 +11,10 @@ const backend = defineBackend({
 });
 
 // Create the REST API stack
-const apiStack = backend.createStack('api-stack');
 
-const myApi = new RestApi(apiStack, 'ContactApi', {
-    defaultCorsPreflightOptions: {
-        allowOrigins: Cors.ALL_ORIGINS,
-        allowMethods: Cors.ALL_METHODS,
-        allowHeaders: Cors.DEFAULT_HEADERS,
-    },
+const sesPolicy = new iam.PolicyStatement({
+    actions: ['ses:SendEmail', 'ses:SendRawEmail'],
+    resources: ['*'], // Or restrict to your specific SES identity ARN
 });
 
-const contactResource = myApi.root.addResource('contact');
-contactResource.addMethod('POST', new LambdaIntegration(backend.sendEmail.resources.lambda));
+backend.sendEmail.resources.lambda.addToRolePolicy(sesPolicy);
