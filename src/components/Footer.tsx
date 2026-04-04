@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import {Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram} from "lucide-react";
+import {Mail, Phone, MapPin} from "lucide-react";
+import { SiInstagram } from 'react-icons/si';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/causeyinnovations/" className="text-gray-400 hover:text-[#00d4d4] transition-colors">
-                <Instagram size={20} />
+                <SiInstagram size={20} />
               </a>
             </div>
           </div>
