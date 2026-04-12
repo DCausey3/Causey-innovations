@@ -14,10 +14,14 @@ export function Home() {
   return (
     <div className="w-full">
       {/* Hero Section with Animated Cables */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
-        <div className="absolute inset-0 z-0">
-          {/* Animated Circuit Cables */}
-          <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
+            <div className="absolute inset-0 z-0">
+                {/* Animated Circuit Cables */}
+                <svg
+                    className="w-full h-full"
+                    viewBox="0 0 1200 800"
+                    preserveAspectRatio="xMidYMid slice"
+                >
             {/* Left cables */}
             <motion.line
               x1="0"
@@ -135,59 +139,60 @@ export function Home() {
           </svg>
         </div>
 
-        <div className="relative z-10 text-center max-w-5xl mx-auto">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 1.8 }}
-            className="mb-8 flex justify-center"
-          >
-            <div className="relative">
-              <Logo className="h-32 w-32 md:h-40 md:w-40" />
-              <motion.div
-                className="absolute inset-0 rounded-full bg-[#00d4d4]"
-                animate={{
-                  boxShadow: [
-                    "0 0 20px rgba(0,212,212,0.3)",
-                    "0 0 40px rgba(0,212,212,0.6)",
-                    "0 0 20px rgba(0,212,212,0.3)",
-                  ],
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
-          </motion.div>
+            <div className="relative z-10 text-center max-w-5xl mx-auto w-full">
+                {/* Logo — unchanged */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 1.8 }}
+                    className="mb-8 flex justify-center"
+                >
+                    <div className="relative">
+                        <Logo className="h-24 w-24 md:h-40 md:w-40" />
+                        <motion.div
+                            className="absolute inset-0 rounded-full bg-[#00d4d4]"
+                            animate={{
+                                boxShadow: [
+                                    "0 0 20px rgba(0,212,212,0.3)",
+                                    "0 0 40px rgba(0,212,212,0.6)",
+                                    "0 0 20px rgba(0,212,212,0.3)",
+                                ],
+                            }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                        />
+                    </div>
+                </motion.div>
 
           {/* Company Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
-          >
-            CAUSEY<span className="text-[#00d4d4]">INNOVATIONS</span>
-          </motion.h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 2 }}
+                    className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+                >
+                    CAUSEY<span className="text-[#00d4d4]">INNOVATIONS</span>
+                </motion.h1>
 
           {/* Headline */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.2 }}
-            className="text-3xl md:text-5xl font-bold text-white mb-6"
-          >
-            Building Digital Infrastructure That Connects.
-          </motion.h2>
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 2.2 }}
+                    className="text-xl sm:text-3xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                >
+                    Building Digital Infrastructure That Connects.
+                </motion.h2>
 
           {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.4 }}
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
-          >
-            Websites designed to grow your organization, track engagement, and build meaningful connections.
-          </motion.p>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 2.4 }}
+                    className="text-base sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
+                >
+                    Websites designed to grow your organization, track engagement, and
+                    build meaningful connections.
+                </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
