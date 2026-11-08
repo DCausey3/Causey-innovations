@@ -18,8 +18,8 @@ export function Portfolio() {
             title: "East Conference Lay Organization",
             category: "churches",
             description: "A centralized digital hub designed to unify 17 counties and streamline district communication.",
-            image: "/eastconferencelay.png", // Path to your screenshot
-            link: "https://eastconferencelay.org", // Replace with actual URL
+            image: "/eastconferencelay.png",
+            link: "https://eastconferencelay.org",
             stats: [
                 { icon: Users, value: "17", label: "Districts Supported" },
                 { icon: Clock, value: "Scalable", label: "Cloud Infrastructure" },
@@ -29,13 +29,41 @@ export function Portfolio() {
             results: "Engineered to provide each district with a dedicated landing page while maintaining a unified conference identity.",
         },
         {
+            title: "Florida Conference Lay Organization",
+            category: "churches",
+            description: "A digital home for the Florida Conference Lay Organization and its member districts.",
+            image: null,
+            link: "https://floridaconferencelay.org/",
+            stats: [
+                { icon: Users, value: "Connected", label: "Conference Community" },
+                { icon: Clock, value: "Always On", label: "Online Access" },
+                { icon: TrendingUp, value: "Centralized", label: "Resources" },
+            ],
+            tags: ["Web Design", "Responsive Design"],
+            results: "A central online destination for conference information and resources.",
+        },
+        {
+            title: "West Coast Conference Lay Organization",
+            category: "churches",
+            description: "A dedicated website for the West Coast Conference Lay Organization.",
+            image: null,
+            link: "https://www.westcoastconferencelay.org/",
+            stats: [
+                { icon: Users, value: "Connected", label: "Conference Community" },
+                { icon: Clock, value: "Always On", label: "Online Access" },
+                { icon: TrendingUp, value: "Centralized", label: "Resources" },
+            ],
+            tags: ["Web Design", "Responsive Design"],
+            results: "A central online destination for conference information and resources.",
+        },
+        {
             title: "The Causey Union",
             category: "Weddings",
             description: "A sophisticated event management platform built for high-traffic guest coordination.",
-            image: "/thecauseyunion.png", // Path to your screenshot
-            link: "https://thecauseyunion.com", // Replace with actual URL
+            image: "/thecauseyunion.png",
+            link: null,
             stats: [
-                { icon: Users, value: "Live", label: "Guest Management" },
+                { icon: Users, value: "Custom", label: "Guest Management" },
                 { icon: Clock, value: "Real-time", label: "Updates" },
                 { icon: TrendingUp, value: "Secure", label: "Data Handling" },
             ],
@@ -89,32 +117,43 @@ export function Portfolio() {
             <section className="py-12 px-4 container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredProjects.map((project, index) => (
                     <motion.div
-                        key={index}
+                        key={project.title}
                         whileHover={{ y: -5 }}
                         className="bg-[#1a2642] rounded-xl overflow-hidden border border-gray-800 hover:border-[#00d4d4]/50 transition-all"
                     >
-                        <div className="relative h-64 bg-[#0f1729] overflow-hidden group">
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                            />
-
-                            {/* Hover Overlay with Link */}
-                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-2 bg-[#00d4d4] text-black px-4 py-2 rounded-full font-bold text-sm"
-                                >
-                                    Visit Live Site <ArrowUpRight className="w-4 h-4" />
-                                </a>
-                            </div>
+                        <div className="relative h-64 bg-[#0f1729] overflow-hidden">
+                            {project.image ? (
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover object-top"
+                                />
+                            ) : (
+                                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1a2642] to-[#0f1729] p-8 text-center">
+                                    <div>
+                                        <div className="text-sm uppercase tracking-[0.3em] text-[#00d4d4] mb-3">Conference Website</div>
+                                        <div className="text-2xl font-bold">{project.title}</div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                         <div className="p-6">
                             <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                             <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
+                            {project.link ? (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-[#00d4d4] hover:text-white transition-colors text-sm font-bold mb-4"
+                                >
+                                    Visit Live Site <ArrowUpRight className="w-4 h-4" />
+                                </a>
+                            ) : (
+                                <p className="text-sm text-amber-300 mb-4">
+                                    This wedding website is no longer live.
+                                </p>
+                            )}
                             <div className="grid grid-cols-3 gap-2 bg-[#0f1729] p-4 rounded-lg mb-4">
                                 {project.stats.map((s, i) => (
                                     <div key={i} className="text-center">
